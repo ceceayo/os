@@ -16,8 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Install
-      run: sudo apt install -y qemu-system-x86_64
+    - name: Install QEMU
+      run: sudo apt install -y qemu-system-x86
     - name: Rust Install
       run: rustup override set nightly
     - name: Add Rust Core-Src Component
