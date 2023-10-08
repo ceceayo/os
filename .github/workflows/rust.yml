@@ -21,7 +21,11 @@ jobs:
     - name: Rust Install
       run: rustup override set nightly
     - name: Add Rust Core-Src Component
-      run: rustup component add rust-src
+      run: rustup component add rust-src 
+    - name: Add Rust LLVM-tools-preview Component
+      run: llvm-tools-preview
+    - name: Install Bootimage Program
+      run: cargo install bootimage
     - name: Build
       run: cargo build --verbose
     - name: Run tests
